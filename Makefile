@@ -135,6 +135,8 @@ endif  # PLATFORM_SHARED_EXT
 
 all: $(STATIC_OUTDIR)/libleveldb.a $(STATIC_OUTDIR)/libmemenv.a
 
+install:
+
 check: $(STATIC_PROGRAMS)
 	for t in $(notdir $(TESTS)); do echo "***** Running $$t"; $(STATIC_OUTDIR)/$$t || exit 1; done
 
